@@ -1,0 +1,1875 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.11.0",
+  "name": "principios_chapultepec",
+  "origin": {
+    "mimetype": "application/pdf",
+    "binary_hash": 8708934823989451243,
+    "filename": "principios_chapultepec.pdf"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/pictures/0"
+      },
+      {
+        "$ref": "#/pictures/1"
+      },
+      {
+        "$ref": "#/pictures/2"
+      },
+      {
+        "$ref": "#/pictures/3"
+      },
+      {
+        "$ref": "#/texts/0"
+      },
+      {
+        "$ref": "#/texts/1"
+      },
+      {
+        "$ref": "#/texts/2"
+      },
+      {
+        "$ref": "#/texts/3"
+      },
+      {
+        "$ref": "#/groups/0"
+      },
+      {
+        "$ref": "#/texts/12"
+      },
+      {
+        "$ref": "#/texts/13"
+      },
+      {
+        "$ref": "#/groups/1"
+      },
+      {
+        "$ref": "#/texts/16"
+      },
+      {
+        "$ref": "#/groups/2"
+      },
+      {
+        "$ref": "#/pictures/4"
+      },
+      {
+        "$ref": "#/pictures/5"
+      },
+      {
+        "$ref": "#/pictures/6"
+      },
+      {
+        "$ref": "#/pictures/7"
+      },
+      {
+        "$ref": "#/pictures/8"
+      },
+      {
+        "$ref": "#/pictures/9"
+      },
+      {
+        "$ref": "#/texts/27"
+      },
+      {
+        "$ref": "#/groups/3"
+      },
+      {
+        "$ref": "#/texts/30"
+      },
+      {
+        "$ref": "#/groups/4"
+      },
+      {
+        "$ref": "#/texts/33"
+      },
+      {
+        "$ref": "#/groups/5"
+      },
+      {
+        "$ref": "#/texts/38"
+      },
+      {
+        "$ref": "#/groups/6"
+      },
+      {
+        "$ref": "#/texts/40"
+      },
+      {
+        "$ref": "#/groups/7"
+      },
+      {
+        "$ref": "#/texts/43"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/4"
+        },
+        {
+          "$ref": "#/texts/5"
+        },
+        {
+          "$ref": "#/texts/6"
+        },
+        {
+          "$ref": "#/texts/7"
+        },
+        {
+          "$ref": "#/texts/8"
+        },
+        {
+          "$ref": "#/texts/9"
+        },
+        {
+          "$ref": "#/texts/10"
+        },
+        {
+          "$ref": "#/texts/11"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/14"
+        },
+        {
+          "$ref": "#/texts/15"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/17"
+        },
+        {
+          "$ref": "#/texts/18"
+        },
+        {
+          "$ref": "#/texts/19"
+        },
+        {
+          "$ref": "#/texts/20"
+        },
+        {
+          "$ref": "#/texts/21"
+        },
+        {
+          "$ref": "#/texts/22"
+        },
+        {
+          "$ref": "#/texts/23"
+        },
+        {
+          "$ref": "#/texts/24"
+        },
+        {
+          "$ref": "#/texts/25"
+        },
+        {
+          "$ref": "#/texts/26"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/28"
+        },
+        {
+          "$ref": "#/texts/29"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/31"
+        },
+        {
+          "$ref": "#/texts/32"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/34"
+        },
+        {
+          "$ref": "#/texts/35"
+        },
+        {
+          "$ref": "#/texts/36"
+        },
+        {
+          "$ref": "#/texts/37"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/39"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/7",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/41"
+        },
+        {
+          "$ref": "#/texts/42"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 184.439208,
+            "t": 719.55,
+            "r": 424.97320799999983,
+            "b": 702.7748112058465,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            25
+          ]
+        }
+      ],
+      "orig": "Principios de Chapultepec",
+      "text": "Principios de Chapultepec",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 123.428472,
+            "t": 687.9388799999999,
+            "r": 478.7225520000002,
+            "b": 656.3158729279701,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            94
+          ]
+        }
+      ],
+      "orig": "Declaraci\u00f3n de \u00e9tica y buenas pr\u00e1cticas para el uso y desarrollo de la Inteligencia Artificial",
+      "text": "Declaraci\u00f3n de \u00e9tica y buenas pr\u00e1cticas para el uso y desarrollo de la Inteligencia Artificial",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 35.379888,
+            "t": 651.08256,
+            "r": 567.1236960000017,
+            "b": 595.9194854256314,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            354
+          ]
+        }
+      ],
+      "orig": "La Secretar\u00eda de Ciencia, Humanidades, Tecnolog\u00eda e Innovaci\u00f3n (Secihti) y la Agencia de Transformaci\u00f3n Digital y Telecomunicaciones (ATDT), en el \u00e1mbito de sus respectivas competencias presentan la Declaraci\u00f3n de \u00e9tica y buenas pr\u00e1cticas para el uso y desarrollo de la Inteligencia Artificial el d\u00eda 29 del mes de enero del 2026, en la Ciudad de M\u00e9xico.",
+      "text": "La Secretar\u00eda de Ciencia, Humanidades, Tecnolog\u00eda e Innovaci\u00f3n (Secihti) y la Agencia de Transformaci\u00f3n Digital y Telecomunicaciones (ATDT), en el \u00e1mbito de sus respectivas competencias presentan la Declaraci\u00f3n de \u00e9tica y buenas pr\u00e1cticas para el uso y desarrollo de la Inteligencia Artificial el d\u00eda 29 del mes de enero del 2026, en la Ciudad de M\u00e9xico."
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 281.22504,
+            "t": 576.47712,
+            "r": 321.1317599999999,
+            "b": 567.3073562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            7
+          ]
+        }
+      ],
+      "orig": "Motivos",
+      "text": "Motivos",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.32,
+            "t": 562.79712,
+            "r": 566.8095840000009,
+            "b": 539.9473562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            210
+          ]
+        }
+      ],
+      "orig": "\u221e La tecnolog\u00eda, en tanto medio para modificar el entorno, tiene efectos directos en nuestra vida, en el desarrollo de nuestras actividades y en la forma en que interactuamos con nuestro medio y entre nosotros.",
+      "text": "\u221e La tecnolog\u00eda, en tanto medio para modificar el entorno, tiene efectos directos en nuestra vida, en el desarrollo de nuestras actividades y en la forma en que interactuamos con nuestro medio y entre nosotros.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.32,
+            "t": 535.4371199999999,
+            "r": 567.0333599999991,
+            "b": 512.8273562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            135
+          ]
+        }
+      ],
+      "orig": "\u221e Por ello, los avances tecnol\u00f3gicos nunca son socialmente neutros. Si son avances significativos, tienen un impacto en la vida social.",
+      "text": "\u221e Por ello, los avances tecnol\u00f3gicos nunca son socialmente neutros. Si son avances significativos, tienen un impacto en la vida social.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.32,
+            "t": 508.31711999999993,
+            "r": 566.8176480000006,
+            "b": 485.4673562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            122
+          ]
+        }
+      ],
+      "orig": "\u221e La inteligencia artificial representa uno de los desarrollos cient\u00edficos y tecnol\u00f3gicos m\u00e1s relevantes de nuestra \u00e9poca.",
+      "text": "\u221e La inteligencia artificial representa uno de los desarrollos cient\u00edficos y tecnol\u00f3gicos m\u00e1s relevantes de nuestra \u00e9poca.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.32,
+            "t": 480.95712,
+            "r": 566.8478879999992,
+            "b": 458.3473562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            174
+          ]
+        }
+      ],
+      "orig": "\u221e Bien orientada, puede contribuir de manera decisiva al bienestar social, a la reducci\u00f3n de desigualdades y a la construcci\u00f3n de un pa\u00eds m\u00e1s justo, equitativo y sustentable.",
+      "text": "\u221e Bien orientada, puede contribuir de manera decisiva al bienestar social, a la reducci\u00f3n de desigualdades y a la construcci\u00f3n de un pa\u00eds m\u00e1s justo, equitativo y sustentable.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.32,
+            "t": 453.8371199999999,
+            "r": 567.0111839999994,
+            "b": 417.3073562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            253
+          ]
+        }
+      ],
+      "orig": "\u221e Pero tambi\u00e9n, como cualquier herramienta poderosa, puede tener efectos delet\u00e9reos, reproducir o profundizar desigualdades, generar nuevas formas de discriminaci\u00f3n y afectar derechos fundamentales si se desarrolla o utiliza sin criterios \u00e9ticos claros.",
+      "text": "\u221e Pero tambi\u00e9n, como cualquier herramienta poderosa, puede tener efectos delet\u00e9reos, reproducir o profundizar desigualdades, generar nuevas formas de discriminaci\u00f3n y afectar derechos fundamentales si se desarrolla o utiliza sin criterios \u00e9ticos claros.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.32,
+            "t": 413.03711999999996,
+            "r": 550.8690720000001,
+            "b": 403.86735625818517,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            112
+          ]
+        }
+      ],
+      "orig": "\u221e El aprovechamiento de la inteligencia artificial exige una visi\u00f3n p\u00fablica y marcos de gobernanza responsables.",
+      "text": "\u221e El aprovechamiento de la inteligencia artificial exige una visi\u00f3n p\u00fablica y marcos de gobernanza responsables.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.32,
+            "t": 399.35711999999995,
+            "r": 566.9406239999989,
+            "b": 362.8273562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            319
+          ]
+        }
+      ],
+      "orig": "\u221e La Secretar\u00eda de Ciencia, Humanidades, Tecnolog\u00eda e Innovaci\u00f3n y la Agencia de Transformaci\u00f3n Digital y Telecomunicaciones establecen estos principios como una gu\u00eda \u00e9tica para orientar pol\u00edticas p\u00fablicas, regulaciones e instrumentos institucionales en todo el ciclo de vida de los sistemas de inteligencia artificial.",
+      "text": "\u221e La Secretar\u00eda de Ciencia, Humanidades, Tecnolog\u00eda e Innovaci\u00f3n y la Agencia de Transformaci\u00f3n Digital y Telecomunicaciones establecen estos principios como una gu\u00eda \u00e9tica para orientar pol\u00edticas p\u00fablicas, regulaciones e instrumentos institucionales en todo el ciclo de vida de los sistemas de inteligencia artificial.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 28.32,
+            "t": 358.55711999999994,
+            "r": 566.9769120000002,
+            "b": 335.7073562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            176
+          ]
+        }
+      ],
+      "orig": "\u221e Su adopci\u00f3n tiene un car\u00e1cter orientador y busca asegurar que la innovaci\u00f3n tecnol\u00f3gica avance de manera coherente con la dignidad humana, la justicia social y el bien com\u00fan.",
+      "text": "\u221e Su adopci\u00f3n tiene un car\u00e1cter orientador y busca asegurar que la innovaci\u00f3n tecnol\u00f3gica avance de manera coherente con la dignidad humana, la justicia social y el bien com\u00fan.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 177.563232,
+            "t": 317.27711999999997,
+            "r": 424.7701919999994,
+            "b": 308.10735625818523,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            50
+          ]
+        }
+      ],
+      "orig": "Los principios orientadores de la Declaraci\u00f3n son:",
+      "text": "Los principios orientadores de la Declaraci\u00f3n son:",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 35.379888,
+            "t": 289.67712,
+            "r": 373.3576799999997,
+            "b": 280.5073562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            70
+          ]
+        }
+      ],
+      "orig": "1.- La inteligencia artificial debe ampliar derechos, nunca reducirlos",
+      "text": "1.- La inteligencia artificial debe ampliar derechos, nunca reducirlos",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 42.48,
+            "t": 275.99712,
+            "r": 567.1427279999994,
+            "b": 239.7073562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            273
+          ]
+        }
+      ],
+      "orig": "\u221e Los sistemas de IA deber\u00e1n proteger los derechos humanos y evitar decisiones automatizadas que, por la forma en que fueron dise\u00f1adas o entrenadas, reproduzcan prejuicios sociales existentes, generen nuevas formas de exclusi\u00f3n o atenten contra el derecho a la informaci\u00f3n.",
+      "text": "\u221e Los sistemas de IA deber\u00e1n proteger los derechos humanos y evitar decisiones automatizadas que, por la forma en que fueron dise\u00f1adas o entrenadas, reproduzcan prejuicios sociales existentes, generen nuevas formas de exclusi\u00f3n o atenten contra el derecho a la informaci\u00f3n.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 42.48,
+            "t": 235.19712000000004,
+            "r": 566.9867039999999,
+            "b": 198.66735625818524,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            329
+          ]
+        }
+      ],
+      "orig": "\u221e Esto implica revisar de manera continua si los datos y criterios que utiliza un sistema reproducen desigualdades hist\u00f3ricas -por ejemplo, de g\u00e9nero, origen \u00e9tnico, condici\u00f3n social o discapacidad- y evitarlo o corregirlo oportunamente, as\u00ed como evitar el uso deliberado de la IA para enga\u00f1ar o desinformar a la opini\u00f3n p\u00fablica.",
+      "text": "\u221e Esto implica revisar de manera continua si los datos y criterios que utiliza un sistema reproducen desigualdades hist\u00f3ricas -por ejemplo, de g\u00e9nero, origen \u00e9tnico, condici\u00f3n social o discapacidad- y evitarlo o corregirlo oportunamente, as\u00ed como evitar el uso deliberado de la IA para enga\u00f1ar o desinformar a la opini\u00f3n p\u00fablica.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 35.379888,
+            "t": 194.39711999999997,
+            "r": 462.80860799999897,
+            "b": 185.22735625818518,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            85
+          ]
+        }
+      ],
+      "orig": "2.- Toda decisi\u00f3n apoyada por inteligencia artificial debe tener responsables humanos",
+      "text": "2.- Toda decisi\u00f3n apoyada por inteligencia artificial debe tener responsables humanos",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 42.48,
+            "t": 180.71712000000002,
+            "r": 567.2163120000002,
+            "b": 144.18735625818522,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            230
+          ]
+        }
+      ],
+      "orig": "\u221e La inteligencia artificial no puede operar sin responsables. Su uso en el \u00e1mbito p\u00fablico debe sustentarse en marcos institucionales claros que definan qui\u00e9n dise\u00f1a, qui\u00e9n decide, qui\u00e9n supervisa y qui\u00e9n responde por sus efectos.",
+      "text": "\u221e La inteligencia artificial no puede operar sin responsables. Su uso en el \u00e1mbito p\u00fablico debe sustentarse en marcos institucionales claros que definan qui\u00e9n dise\u00f1a, qui\u00e9n decide, qui\u00e9n supervisa y qui\u00e9n responde por sus efectos.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 42.48,
+            "t": 139.91712000000007,
+            "r": 566.9542320000006,
+            "b": 117.06735625818521,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            215
+          ]
+        }
+      ],
+      "orig": "\u221e La rendici\u00f3n de cuentas significa que las decisiones apoyadas en IA no quedan \"en manos de la m\u00e1quina\", sino que existen autoridades que toman las decisiones, procedimientos de revisi\u00f3n y mecanismos de correcci\u00f3n.",
+      "text": "\u221e La rendici\u00f3n de cuentas significa que las decisiones apoyadas en IA no quedan \"en manos de la m\u00e1quina\", sino que existen autoridades que toman las decisiones, procedimientos de revisi\u00f3n y mecanismos de correcci\u00f3n.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 35.379888,
+            "t": 112.55711999999994,
+            "r": 346.6980959999999,
+            "b": 103.38735625818526,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            62
+          ]
+        }
+      ],
+      "orig": "3.- Si una decisi\u00f3n no puede explicarse, no debe automatizarse",
+      "text": "3.- Si una decisi\u00f3n no puede explicarse, no debe automatizarse",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 42.48,
+            "t": 98.87711999999988,
+            "r": 566.8393199999998,
+            "b": 62.587356258185196,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            237
+          ]
+        }
+      ],
+      "orig": "\u221e El uso \u00e9tico de la inteligencia artificial requiere que las personas puedan saber cu\u00e1ndo una decisi\u00f3n fue apoyada por un sistema automatizado, comprender de manera razonable c\u00f3mo se lleg\u00f3 a ella y reconstruir el proceso que la produjo.",
+      "text": "\u221e El uso \u00e9tico de la inteligencia artificial requiere que las personas puedan saber cu\u00e1ndo una decisi\u00f3n fue apoyada por un sistema automatizado, comprender de manera razonable c\u00f3mo se lleg\u00f3 a ella y reconstruir el proceso que la produjo.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 717.5971199999999,
+            "r": 566.9643120000002,
+            "b": 694.7473562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            128
+          ]
+        }
+      ],
+      "orig": "\u221e Esto significa contar con informaci\u00f3n clara y accesible sobre las fuentes de informaci\u00f3n en las que se basa el producto final.",
+      "text": "\u221e Esto significa contar con informaci\u00f3n clara y accesible sobre las fuentes de informaci\u00f3n en las que se basa el producto final.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 690.23712,
+            "r": 566.9118959999998,
+            "b": 667.6273562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            223
+          ]
+        }
+      ],
+      "orig": "\u221e En la investigaci\u00f3n cient\u00edfica y la producci\u00f3n de conocimiento, este principio se traduce en pr\u00e1cticas abiertas y responsables que permitan verificar resultados, reproducir procesos y declarar expl\u00edcitamente el uso de IA.",
+      "text": "\u221e En la investigaci\u00f3n cient\u00edfica y la producci\u00f3n de conocimiento, este principio se traduce en pr\u00e1cticas abiertas y responsables que permitan verificar resultados, reproducir procesos y declarar expl\u00edcitamente el uso de IA.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 35.379888,
+            "t": 663.11712,
+            "r": 414.3782399999995,
+            "b": 653.9473562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            79
+          ]
+        }
+      ],
+      "orig": "4.- La inteligencia artificial se gobierna mejor cuando se decide en colectivo.",
+      "text": "4.- La inteligencia artificial se gobierna mejor cuando se decide en colectivo.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 649.4371199999999,
+            "r": 566.9542320000004,
+            "b": 626.5873562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            134
+          ]
+        }
+      ],
+      "orig": "\u221e Las decisiones sobre el desarrollo y uso de la inteligencia artificial no deben tomarse de manera aislada ni exclusivamente t\u00e9cnica.",
+      "text": "\u221e Las decisiones sobre el desarrollo y uso de la inteligencia artificial no deben tomarse de manera aislada ni exclusivamente t\u00e9cnica.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 622.3171199999999,
+            "r": 566.9864879999998,
+            "b": 599.4673562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            191
+          ]
+        }
+      ],
+      "orig": "\u221e Es necesario promover espacios permanentes de participaci\u00f3n y di\u00e1logo que incorporen a la ciudadan\u00eda, a la academia, a las comunidades, a las organizaciones sociales y al sector productivo.",
+      "text": "\u221e Es necesario promover espacios permanentes de participaci\u00f3n y di\u00e1logo que incorporen a la ciudadan\u00eda, a la academia, a las comunidades, a las organizaciones sociales y al sector productivo.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 594.9571199999999,
+            "r": 566.9300400000001,
+            "b": 558.6673562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            256
+          ]
+        }
+      ],
+      "orig": "\u221e Esta gobernanza compartida permite que la inteligencia artificial responda a necesidades reales, considere distintos puntos de vista y se oriente al inter\u00e9s p\u00fablico, fortaleciendo su legitimidad social y su contribuci\u00f3n al desarrollo sostenible del pa\u00eds.",
+      "text": "\u221e Esta gobernanza compartida permite que la inteligencia artificial responda a necesidades reales, considere distintos puntos de vista y se oriente al inter\u00e9s p\u00fablico, fortaleciendo su legitimidad social y su contribuci\u00f3n al desarrollo sostenible del pa\u00eds.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 35.379888,
+            "t": 554.15712,
+            "r": 461.16455999999926,
+            "b": 544.9873562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            90
+          ]
+        }
+      ],
+      "orig": "5.- La inteligencia artificial solo es valiosa si genera bienestar para todas las personas",
+      "text": "5.- La inteligencia artificial solo es valiosa si genera bienestar para todas las personas",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 540.47712,
+            "r": 566.8413360000008,
+            "b": 517.6273562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            126
+          ]
+        }
+      ],
+      "orig": "\u221e La inteligencia artificial debe evaluarse no solo por su eficiencia t\u00e9cnica, sino por su capacidad de generar valor p\u00fablico.",
+      "text": "\u221e La inteligencia artificial debe evaluarse no solo por su eficiencia t\u00e9cnica, sino por su capacidad de generar valor p\u00fablico.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 513.35712,
+            "r": 566.9340720000002,
+            "b": 490.50735625818515,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            137
+          ]
+        }
+      ],
+      "orig": "\u221e Su uso en el \u00e1mbito gubernamental debe contribuir a ampliar derechos, reducir desigualdades y mejorar el acceso a servicios esenciales.",
+      "text": "\u221e Su uso en el \u00e1mbito gubernamental debe contribuir a ampliar derechos, reducir desigualdades y mejorar el acceso a servicios esenciales.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 35.379888,
+            "t": 485.99712,
+            "r": 376.9864799999998,
+            "b": 476.8273562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            67
+          ]
+        }
+      ],
+      "orig": "6.- Antes de automatizar, hay que comprender a qui\u00e9n y a qu\u00e9 afecta",
+      "text": "6.- Antes de automatizar, hay que comprender a qui\u00e9n y a qu\u00e9 afecta",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 472.31711999999993,
+            "r": 567.0288240000015,
+            "b": 449.7073562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            190
+          ]
+        }
+      ],
+      "orig": "\u221e Antes y durante la implementaci\u00f3n de sistemas de inteligencia artificial en pol\u00edticas y programas p\u00fablicos, es necesario evaluar sus posibles efectos sociales, territoriales y ambientales.",
+      "text": "\u221e Antes y durante la implementaci\u00f3n de sistemas de inteligencia artificial en pol\u00edticas y programas p\u00fablicos, es necesario evaluar sus posibles efectos sociales, territoriales y ambientales.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 445.1971199999999,
+            "r": 566.8010160000006,
+            "b": 422.3473562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            173
+          ]
+        }
+      ],
+      "orig": "\u221e La inteligencia artificial no es solo software: depende de infraestructuras f\u00edsicas, consumo energ\u00e9tico y recursos naturales, por lo que su desarrollo debe ser sostenible.",
+      "text": "\u221e La inteligencia artificial no es solo software: depende de infraestructuras f\u00edsicas, consumo energ\u00e9tico y recursos naturales, por lo que su desarrollo debe ser sostenible.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 35.379888,
+            "t": 417.8371199999999,
+            "r": 386.5624799999996,
+            "b": 408.6673562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            71
+          ]
+        }
+      ],
+      "orig": "7.- La tecnolog\u00eda estrat\u00e9gica debe responder a las necesidades del pa\u00eds",
+      "text": "7.- La tecnolog\u00eda estrat\u00e9gica debe responder a las necesidades del pa\u00eds",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 404.39712,
+            "r": 566.9562480000003,
+            "b": 367.86735625818517,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            272
+          ]
+        }
+      ],
+      "orig": "\u221e El desarrollo de infraestructuras p\u00fablicas para la inteligencia artificial debe fortalecer la capacidad del pa\u00eds para decidir de manera aut\u00f3noma sobre sus tecnolog\u00edas estrat\u00e9gicas, por lo que debe alinearse con las necesidades nacionales y con una visi\u00f3n de largo plazo.",
+      "text": "\u221e El desarrollo de infraestructuras p\u00fablicas para la inteligencia artificial debe fortalecer la capacidad del pa\u00eds para decidir de manera aut\u00f3noma sobre sus tecnolog\u00edas estrat\u00e9gicas, por lo que debe alinearse con las necesidades nacionales y con una visi\u00f3n de largo plazo.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 35.379888,
+            "t": 363.35711999999995,
+            "r": 547.0612799999992,
+            "b": 354.1873562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            109
+          ]
+        }
+      ],
+      "orig": "8.- El desarrollo de la inteligencia artificial requiere fortalecer la educaci\u00f3n y el conocimiento en el pa\u00eds",
+      "text": "8.- El desarrollo de la inteligencia artificial requiere fortalecer la educaci\u00f3n y el conocimiento en el pa\u00eds",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 349.91711999999995,
+            "r": 566.8725839999996,
+            "b": 313.3873562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            300
+          ]
+        }
+      ],
+      "orig": "\u221e La inteligencia artificial no es solo un desaf\u00edo t\u00e9cnico, sino tambi\u00e9n cient\u00edfico, educativo y human\u00edstico. Su desarrollo debe acompa\u00f1arse del fortalecimiento de capacidades en todos los niveles educativos, la formaci\u00f3n continua de talento especializado y la reconversi\u00f3n de perfiles profesionales.",
+      "text": "\u221e La inteligencia artificial no es solo un desaf\u00edo t\u00e9cnico, sino tambi\u00e9n cient\u00edfico, educativo y human\u00edstico. Su desarrollo debe acompa\u00f1arse del fortalecimiento de capacidades en todos los niveles educativos, la formaci\u00f3n continua de talento especializado y la reconversi\u00f3n de perfiles profesionales.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 308.87712,
+            "r": 567.0109919999994,
+            "b": 258.90735625818525,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            327
+          ]
+        }
+      ],
+      "orig": "\u221e Asimismo, es fundamental impulsar la investigaci\u00f3n interdisciplinaria que integre ciencias, tecnolog\u00edas y humanidades, orientada a resolver problemas nacionales y a comprender los impactos sociales, \u00e9ticos y culturales de la IA, as\u00ed como la difusi\u00f3n de informaci\u00f3n al p\u00fablico general sobre su uso, beneficios e implicaciones.",
+      "text": "\u221e Asimismo, es fundamental impulsar la investigaci\u00f3n interdisciplinaria que integre ciencias, tecnolog\u00edas y humanidades, orientada a resolver problemas nacionales y a comprender los impactos sociales, \u00e9ticos y culturales de la IA, as\u00ed como la difusi\u00f3n de informaci\u00f3n al p\u00fablico general sobre su uso, beneficios e implicaciones.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 35.379888,
+            "t": 254.39711999999997,
+            "r": 488.6627999999993,
+            "b": 245.22735625818518,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            98
+          ]
+        }
+      ],
+      "orig": "9.- La inteligencia artificial no puede ser ajena a la diversidad cultural y ling\u00fc\u00edstica del pa\u00eds.",
+      "text": "9.- La inteligencia artificial no puede ser ajena a la diversidad cultural y ling\u00fc\u00edstica del pa\u00eds.",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "$ref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 240.95712000000003,
+            "r": 567.0116880000006,
+            "b": 204.42735625818523,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            242
+          ]
+        }
+      ],
+      "orig": "\u221e Para que la inteligencia artificial refleje la diversidad cultural del pa\u00eds, es indispensable recuperar y fortalecer las lenguas ind\u00edgenas y construir acervos ling\u00fc\u00edsticos que permitan alimentar estos sistemas desde nuestra propia realidad.",
+      "text": "\u221e Para que la inteligencia artificial refleje la diversidad cultural del pa\u00eds, es indispensable recuperar y fortalecer las lenguas ind\u00edgenas y construir acervos ling\u00fc\u00edsticos que permitan alimentar estos sistemas desde nuestra propia realidad.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 35.379888,
+            "t": 199.91712000000007,
+            "r": 398.7840719999995,
+            "b": 190.74735625818516,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            72
+          ]
+        }
+      ],
+      "orig": "10.- Los datos son un bien p\u00fablico que debe cuidarse con responsabilidad",
+      "text": "10.- Los datos son un bien p\u00fablico que debe cuidarse con responsabilidad",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 186.47712,
+            "r": 566.9915279999993,
+            "b": 149.9473562581852,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            254
+          ]
+        }
+      ],
+      "orig": "\u221e La inteligencia artificial se construye a partir de datos (im\u00e1genes, documentos, informaci\u00f3n personal). Su uso \u00e9tico exige garantizar la calidad, representatividad y seguridad de la informaci\u00f3n, as\u00ed como el respeto a la privacidad y al inter\u00e9s p\u00fablico.",
+      "text": "\u221e La inteligencia artificial se construye a partir de datos (im\u00e1genes, documentos, informaci\u00f3n personal). Su uso \u00e9tico exige garantizar la calidad, representatividad y seguridad de la informaci\u00f3n, as\u00ed como el respeto a la privacidad y al inter\u00e9s p\u00fablico.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 42.48,
+            "t": 143.71751999999992,
+            "r": 567.1145040000004,
+            "b": 103.62735625818527,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            237
+          ]
+        }
+      ],
+      "orig": "\u221e La gesti\u00f3n responsable de los datos implica prevenir usos indebidos, proteger la informaci\u00f3n sensible y fortalecer la ciberseguridad durante todo el ciclo de vida de los sistemas de IA, asegurando su confiabilidad y legitimidad social.",
+      "text": "\u221e La gesti\u00f3n responsable de los datos implica prevenir usos indebidos, proteger la informaci\u00f3n sensible y fortalecer la ciberseguridad durante todo el ciclo de vida de los sistemas de IA, asegurando su confiabilidad y legitimidad social.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 207.01245600000001,
+            "t": 77.51711999999998,
+            "r": 409.5408240000004,
+            "b": 68.34735625818519,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            40
+          ]
+        }
+      ],
+      "orig": "Ciudad de M\u00e9xico, a 29 de enero de 2026.",
+      "text": "Ciudad de M\u00e9xico, a 29 de enero de 2026."
+    }
+  ],
+  "pictures": [
+    {
+      "self_ref": "#/pictures/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 44.358177185058594,
+            "t": 768.9837322235107,
+            "r": 134.7443084716797,
+            "b": 740.437744140625,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 151.15017700195312,
+            "t": 760.934118270874,
+            "r": 286.40240478515625,
+            "b": 743.8408393859863,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 302.6413269042969,
+            "t": 760.9237594604492,
+            "r": 449.41131591796875,
+            "b": 743.0276679992676,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 466.7125244140625,
+            "t": 760.9795818328857,
+            "r": 520.605712890625,
+            "b": 743.2616958618164,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/4",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 532.099609375,
+            "t": 757.8671417236328,
+            "r": 566.7891845703125,
+            "b": 745.273853302002,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 44.24919891357422,
+            "t": 767.1638774871826,
+            "r": 134.77943420410156,
+            "b": 739.1645431518555,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/6",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 150.99847412109375,
+            "t": 759.2175331115723,
+            "r": 286.6419982910156,
+            "b": 742.2836227416992,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/7",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 302.81085205078125,
+            "t": 759.4465255737305,
+            "r": 449.48455810546875,
+            "b": 741.4169692993164,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/8",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 466.5480041503906,
+            "t": 759.5575866699219,
+            "r": 520.6802368164062,
+            "b": 741.2083625793457,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/9",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 531.6640014648438,
+            "t": 756.2432518005371,
+            "r": 566.7575073242188,
+            "b": 744.0061950683594,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    }
+  ],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {
+    "1": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 1
+    },
+    "2": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 2
+    }
+  }
+}

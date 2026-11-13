@@ -1,0 +1,6 @@
+pymupdf==1.26.5
+pdfplumber==0.11.7
+pypdf==6.1.1
+docling==2.148.0
+ipykernel==7.4.0
+nbconvert==7.17.2

@@ -1,0 +1,26 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Claves de API (para la etapa de generación)
+.env
+.env.*
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Datos: los PDF originales se descargan de las URL de data/manifest.json
+# (con su suma de verificación), y data/parsed es una versión anterior del parsing
+data/raw/
+data/parsed/
