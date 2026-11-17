@@ -23,12 +23,15 @@ Los PDF no se incluyen en el repositorio porque no son de este proyecto. Sus fue
 | Ruta | Contenido |
 |---|---|
 | `main/parser.ipynb` | Parsing con Docling: limpieza de encabezados y pies, tablas, notas al pie y texto recuperado. Cada decisión está documentada en el notebook. |
-| `main/rag.ipynb` | Chunking, consultas de evaluación y, más adelante, retrieval, generación y evaluación. |
+| `main/rag.ipynb` | Chunking, consultas de evaluación, embeddings (BGE-M3), base vectorial (ChromaDB), recuperación (BM25, embeddings y embeddings con reranker) con Precision@k y Recall@k, generación con un LLM local (qwen3.5:9b en Ollama), evaluación con RAGAS y análisis de errores. |
+| `docs/presentacion.md` | Presentación del proyecto: arquitectura, decisiones con sus razones, resultados, análisis de errores y visión de producción. |
 | `data/manifest.json` | Metadatos de los documentos: título, tipo, estatus, fuente y suma de verificación. |
 | `data/docling/` | Salida de Docling, un JSON por documento. |
 | `data/elements.jsonl` | Un registro por elemento de los PDF, con las decisiones de limpieza. Es la entrada de `rag.ipynb`. |
 | `data/markdown/` | Texto limpio de cada documento por página, para leerlo y anotar las consultas. |
-| `data/queries.json` | Consultas de evaluación con sus respuestas ideales y pasajes esperados (en preparación). |
+| `data/queries.json` | Las 10 consultas de evaluación, con sus respuestas ideales y pasajes esperados. |
+| `data/answers.json` | Respuestas generadas para cada consulta con cada estrategia de recuperación. |
+| `data/ragas_scores.csv` | Puntajes de RAGAS de esas respuestas. |
 | `docs/corpus.md` | Caso de uso y justificación del corpus. Su sección de parsing describe una primera versión con PyMuPDF (`scripts/`), que se reemplazó por Docling en `main/parser.ipynb`. |
 | `scripts/` | Scripts de esa primera versión del parsing. Los notebooks no los usan. |
 
@@ -56,6 +59,14 @@ Se usó Python 3.13.
 
    «suma distinta» significa que la fuente cambió desde la descarga (por ejemplo, una reforma a la ley) y los resultados pueden no coincidir.
 
-3. Ejecutar los notebooks desde la carpeta `main/`, en orden:
+3. Solo para la generación y RAGAS en `rag.ipynb`: instalar [Ollama](https://ollama.com) y descargar el modelo (6.6 GB; se usó una GPU de 16 GB):
+
+   ```bash
+   ollama pull qwen3.5:9b
+   ```
+
+   El notebook crea a partir de él una variante con contexto de 16,384 tokens (`qwen3.5-9b-16k`).
+
+4. Ejecutar los notebooks desde la carpeta `main/`, en orden:
    - `parser.ipynb` necesita los PDF. La conversión con Docling se omite para los documentos que ya están en `data/docling/`; si se borran, Docling descarga sus modelos la primera vez y tarda varios minutos.
-   - `rag.ipynb` lee `data/elements.jsonl`, que ya está en el repositorio, así que se puede ejecutar sin los PDF.
+   - `rag.ipynb` lee `data/elements.jsonl`, que ya está en el repositorio, así que se puede ejecutar sin los PDF. La primera vez descarga BGE-M3 y el reranker bge-reranker-v2-m3 (unos 2.3 GB cada uno). Reutiliza las respuestas de `data/answers.json` y los puntajes de `data/ragas_scores.csv` mientras no cambien los chunks recuperados ni las respuestas.

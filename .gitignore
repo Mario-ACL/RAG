@@ -24,3 +24,7 @@ desktop.ini
 # (con su suma de verificación), y data/parsed es una versión anterior del parsing
 data/raw/
 data/parsed/
+
+# Índices que el notebook reconstruye (embeddings y base vectorial)
+data/embeddings/
+data/chroma/

@@ -1,0 +1,227 @@
+[
+  {
+    "id": "q01",
+    "question": "¿La obligación de guardar confidencialidad es igual para empresas que para dependencias de gobierno?",
+    "type": "respondible",
+    "ideal_answer": "Es prácticamente la misma obligación. Para las empresas, el artículo 20 de la LFPDPPP obliga al responsable o tercero a establecer controles o mecanismos para que todas las personas que intervengan en cualquier fase del tratamiento guarden confidencialidad de los datos personales, obligación que subsiste aun después de terminar su relación con él. Para las dependencias de gobierno, el artículo 36 de la LGPDPPSO establece lo mismo, pero agrega que es sin menoscabo de las disposiciones de acceso a la información pública.",
+    "evidence": [
+      {
+        "doc_id": "lfpdppp",
+        "page": 6,
+        "quote": "guarden confidencialidad respecto de estos, obligación que subsistirá aun después de finalizar sus relaciones con el mismo"
+      },
+      {
+        "doc_id": "lgpdppso",
+        "page": 10,
+        "quote": "guarden confidencialidad respecto de éstos, obligación que subsistirá aún después de finalizar sus relaciones con el mismo"
+      },
+      {
+        "doc_id": "lgpdppso",
+        "page": 10,
+        "quote": "Lo anterior, sin menoscabo de lo establecido en las disposiciones de acceso a la información pública."
+      }
+    ]
+  },
+  {
+    "id": "q02",
+    "question": "¿En qué artículo de la LFPDPPP está el deber de confidencialidad?",
+    "type": "respondible",
+    "ideal_answer": "En el artículo 20 de la LFPDPPP, que obliga al responsable o tercero a establecer controles para que quienes intervienen en el tratamiento guarden confidencialidad de los datos personales. El artículo 58, fracción VIII, lo confirma al considerar infracción incumplir el deber de confidencialidad establecido en el artículo 20.",
+    "evidence": [
+      {
+        "doc_id": "lfpdppp",
+        "page": 6,
+        "quote": "Artículo 20. El responsable o tercero deberá establecer controles o mecanismos que tengan por objeto que todas aquellas personas que intervengan en cualquier fase del tratamiento de datos personales, guarden confidencialidad"
+      },
+      {
+        "doc_id": "lfpdppp",
+        "page": 16,
+        "quote": "Incumplir el deber de confidencialidad establecido en el artículo 20 de esta Ley"
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "question": "Si contrato un servicio en la nube, ¿el proveedor tiene que guardar confidencialidad de los datos?",
+    "type": "respondible",
+    "ideal_answer": "Sí. El Reglamento de la LFPDPPP (artículo 52) establece que el responsable solo puede usar servicios de cómputo en la nube cuyo proveedor, entre otras condiciones, guarde confidencialidad respecto de los datos personales sobre los que presta el servicio. La LGPDPPSO (artículo 58) exige lo mismo en el sector público, y la guía del INAI retoma este requisito.",
+    "evidence": [
+      {
+        "doc_id": "reglamento_lfpdppp",
+        "page": 14,
+        "quote": "Guardar confidencialidad respecto de los datos personales sobre los que se preste el servicio"
+      },
+      {
+        "doc_id": "lgpdppso",
+        "page": 15,
+        "quote": "Guardar confidencialidad respecto de los datos personales sobre los que se preste el servicio"
+      },
+      {
+        "doc_id": "inai_recomendaciones_ia",
+        "page": 28,
+        "quote": "Guardar confidencialidad respecto de los datos personales sobre los que se preste el servicio"
+      }
+    ]
+  },
+  {
+    "id": "q04",
+    "question": "¿Puedo oponerme a que un banco decida si me da un crédito usando solo un algoritmo?",
+    "type": "respondible",
+    "ideal_answer": "Sí. El artículo 26, fracción II, de la LFPDPPP da derecho a oponerse al tratamiento cuando los datos personales son objeto de un tratamiento automatizado que produce efectos jurídicos no deseados o afecta de manera significativa los intereses, derechos o libertades de la persona, y que está destinado a evaluar sin intervención humana aspectos personales como su situación económica o su fiabilidad. No procede si el tratamiento es necesario para cumplir una obligación legal del responsable.",
+    "evidence": [
+      {
+        "doc_id": "lfpdppp",
+        "page": 8,
+        "quote": "Sus datos personales sean objeto de un tratamiento automatizado, el cual le produzca efectos jurídicos no deseados o afecte de manera significativa sus intereses, derechos o libertades"
+      },
+      {
+        "doc_id": "lfpdppp",
+        "page": 8,
+        "quote": "No procederá el ejercicio del derecho de oposición en aquellos casos en los que el tratamiento sea necesario para el cumplimiento de una obligación legal impuesta al responsable."
+      }
+    ]
+  },
+  {
+    "id": "q05",
+    "question": "Mi app de salud guarda el historial médico de los usuarios, ¿qué tipo de consentimiento necesito?",
+    "type": "respondible",
+    "ideal_answer": "Los datos sobre el estado de salud son datos personales sensibles (LFPDPPP, artículo 2, fracción VI), así que se necesita el consentimiento expreso y por escrito de cada usuario, mediante firma autógrafa, firma electrónica o algún mecanismo de autenticación (artículo 8). Además, solo se pueden crear bases de datos con datos sensibles si se justifican por finalidades legítimas, concretas y acordes con la actividad de la empresa. La guía del INAI recomienda lo mismo.",
+    "evidence": [
+      {
+        "doc_id": "lfpdppp",
+        "page": 2,
+        "quote": "se consideran sensibles los datos personales que puedan revelar aspectos como origen racial o étnico, estado de salud presente o futuro"
+      },
+      {
+        "doc_id": "lfpdppp",
+        "page": 4,
+        "quote": "Tratándose de datos personales sensibles, el responsable deberá obtener el consentimiento expreso y por escrito de la persona titular para su tratamiento"
+      },
+      {
+        "doc_id": "inai_recomendaciones_ia",
+        "page": 35,
+        "quote": "Solicitar el consentimiento expreso y por escrito para los datos personales sensibles."
+      }
+    ]
+  },
+  {
+    "id": "q06",
+    "question": "¿Qué le recomienda la UNESCO a México para regular la inteligencia artificial?",
+    "type": "respondible",
+    "ideal_answer": "Integrar un marco jurídico para la IA sin crear necesariamente un cuerpo regulatorio nuevo: identificar qué normas vigentes pueden aplicarse a la IA, cuáles deben adecuarse y cuáles hace falta crear; sensibilizar a autoridades y operadores jurídicos; diseñar instrumentos regulatorios ágiles; y definir criterios para el uso ético de la IA basados en principios y en la gestión de riesgos, valorando prohibir los sistemas que generan altos riesgos para la seguridad y los derechos humanos. También destaca actualizar el marco de protección de datos personales.",
+    "evidence": [
+      {
+        "doc_id": "unesco_ram_mexico",
+        "page": 52,
+        "quote": "2.1 Identificar las normas vigentes que pueden aplicarse a la IA, cuáles deben ser adecuadas y cuáles son las que hace falta crear."
+      },
+      {
+        "doc_id": "unesco_ram_mexico",
+        "page": 52,
+        "quote": "2.4 Definir criterios para el uso ético de la IA, regulando con base en principios y en la gestión de riesgos"
+      },
+      {
+        "doc_id": "unesco_ram_mexico",
+        "page": 54,
+        "quote": "lo recomendable es revisar las disposiciones existentes en distintos ámbitos y reinterpretarlas a la luz de los avances tecnológicos"
+      },
+      {
+        "doc_id": "unesco_ram_mexico",
+        "page": 54,
+        "quote": "Identificar las normas que pueden aplicarse a la IA para promover su conocimiento"
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "question": "¿Qué dicen los Principios de Chapultepec sobre quién responde por una decisión tomada con IA?",
+    "type": "respondible",
+    "ideal_answer": "Que toda decisión apoyada por inteligencia artificial debe tener responsables humanos: su uso en el ámbito público debe sustentarse en marcos institucionales que definan quién diseña, quién decide, quién supervisa y quién responde por sus efectos, de modo que las decisiones no queden en manos de la máquina y existan procedimientos de revisión y mecanismos de corrección. Además, si una decisión no puede explicarse, no debe automatizarse. Es una declaración ética, no una norma obligatoria.",
+    "evidence": [
+      {
+        "doc_id": "principios_chapultepec",
+        "page": 1,
+        "quote": "La inteligencia artificial no puede operar sin responsables."
+      },
+      {
+        "doc_id": "principios_chapultepec",
+        "page": 1,
+        "quote": "quién diseña, quién decide, quién supervisa y quién responde por sus efectos"
+      }
+    ]
+  },
+  {
+    "id": "q08",
+    "question": "Si se aprueba la iniciativa de ley de IA del Senado, ¿qué castigo tendría usar IA para suplantar la identidad de alguien?",
+    "type": "respondible",
+    "ideal_answer": "La iniciativa (artículo 112) propone de uno a cinco años de prisión y de cuatrocientos a seiscientos días multa para quien use la inteligencia artificial para suplantar la identidad de una persona física o colectiva con el fin de lucrarse indebidamente. Es una propuesta legislativa, no una ley vigente.",
+    "evidence": [
+      {
+        "doc_id": "iniciativa_ley_ia_senado",
+        "page": 38,
+        "quote": "Cuando se utilice la Inteligencia Artificial para suplantar la identidad de una persona física o colectivo para lucrarse indebidamente"
+      }
+    ]
+  },
+  {
+    "id": "q09",
+    "question": "¿Qué multas establece la ley de inteligencia artificial que está vigente en México?",
+    "type": "trampa",
+    "ideal_answer": "Según los documentos, en México no hay una ley de inteligencia artificial vigente. La IA se regula de forma indirecta con normas como la LFPDPPP, la Ley Federal para Prevenir y Eliminar la Discriminación y la Constitución, y se han presentado iniciativas en el Congreso. Una de ellas, la iniciativa de Ley General para el Uso y Control de la Inteligencia Artificial presentada en el Senado, propone sanciones, como multas equivalentes al daño o al 5% de los ingresos anuales del proveedor por el uso indebido de IA en salud y penas de prisión por fraude cibernético con IA, pero es solo una propuesta.",
+    "evidence": [
+      {
+        "doc_id": "unesco_ram_mexico",
+        "page": 19,
+        "quote": "México cuenta con normas que tienen un impacto indirecto en la regulación de la IA"
+      },
+      {
+        "doc_id": "unesco_ram_mexico",
+        "page": 19,
+        "quote": "En cuanto a las iniciativas para modificar o promulgar nuevas leyes relacionadas con la IA, en 2023 se presentaron varias en ambas cámaras"
+      },
+      {
+        "doc_id": "iniciativa_ley_ia_senado",
+        "page": 38,
+        "quote": "Cuando la Inteligencia Artificial se use para realizar fraude cibernético"
+      },
+      {
+        "doc_id": "iniciativa_ley_ia_senado",
+        "page": 38,
+        "quote": "Multas equivalentes al daño generado"
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "¿Cómo presento una queja ante el INAI si una empresa no responde mi solicitud para borrar mis datos?",
+    "type": "trampa",
+    "ideal_answer": "Con la LFPDPPP de 2025 la queja ya no se presenta ante el INAI: se presenta una solicitud de protección de datos ante la Secretaría Anticorrupción y Buen Gobierno, y las menciones al INAI en otras normas se entienden hechas a los entes públicos que asumieron sus funciones. Si la empresa no respondió, la solicitud puede presentarse en cuanto venza el plazo de respuesta de la empresa, acompañada del documento que pruebe la fecha en que se pidió la cancelación. Puede presentarse por escrito libre o con los formatos o el sistema electrónico de la Secretaría.",
+    "evidence": [
+      {
+        "doc_id": "lfpdppp",
+        "page": 11,
+        "quote": "La solicitud de protección de datos deberá presentarse ante la Secretaría dentro de los quince días siguientes"
+      },
+      {
+        "doc_id": "lfpdppp",
+        "page": 11,
+        "quote": "En el caso de que la persona titular de los datos no reciba respuesta por parte del responsable, la solicitud de protección de datos podrá ser presentada a partir de que haya vencido el plazo de respuesta previsto para el responsable"
+      },
+      {
+        "doc_id": "lfpdppp",
+        "page": 12,
+        "quote": "La solicitud de protección de datos podrá interponerse por escrito libre o a través de los formatos, del sistema electrónico que al efecto proporcione la Secretaría"
+      },
+      {
+        "doc_id": "lfpdppp",
+        "page": 3,
+        "quote": "XV. Secretaría: Secretaría Anticorrupción y Buen Gobierno;"
+      },
+      {
+        "doc_id": "lfpdppp",
+        "page": 18,
+        "quote": "se entenderán hechas o conferidas a los entes públicos que adquieren tales atribuciones o funciones"
+      }
+    ]
+  }
+]
