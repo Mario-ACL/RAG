@@ -445,6 +445,14 @@ Un juez de 9B que evalúa sus propias respuestas puede ser indulgente, así que 
 ---
 
 ## 18. Resultados: recuperación
+P = precision (de lo que trajo el sistema, cuanto del texto sirve?), R = recall (De lo que tenia que traer, cuanto encontro?)
+
+
+Como leerlo:
+
+P@1 significa, el primer resultado es correcto? P@3: de los 3 primeros resultados, que parte es correcta?
+
+Y con R@1, R@3, etc, de los chunks correctos, que parte aparecio entre los primeros 1, 3, etc.
 
 Promedio de las 10 consultas:
 
@@ -513,23 +521,6 @@ Recall@5 por consulta:
 - **Faithfulness alta no significa respuesta correcta.** Cinco respuestas incorrectas de BM25 y embeddings tienen 0.94 o más, y q05 con el reranker tiene 1.0: la métrica revisa que cada afirmación esté en los fragmentos, no que sean los correctos ni que estén vigentes.
 - **Answer relevancy castiga las salvedades.** q08 con BM25 es correcta, pero empieza con «no puedo confirmar… como una ley vigente» (lo que pide el prompt) y recibe 0. Esos ceros explican que embeddings saque más que BM25.
 - **El juez local es indulgente con el contexto.** En q06 con embeddings da 1.0 de context precision y recall con el prólogo y los agradecimientos, aunque el Recall@5 anotado es 0.
-
----
-
-## 22. Efecto del reranker
-
-| Consulta | Chunk esperado | Embeddings | + reranker | Respuesta |
-|---|---|---:|---:|---|
-| q04 | Artículo 26 de la LFPDPPP | 27 | **2** | Pasa a ser correcta: cita el artículo 26 y su excepción |
-| q01 | Artículo 20 de la LFPDPPP / 36 de la LGPDPPSO | 10 / 3 | **5 / 4** | Pasa a ser correcta: cita los dos artículos vigentes |
-| q06 | Tabla de recomendaciones de la UNESCO | 11 | **5** | Pasa a ser correcta: lista las recomendaciones del informe |
-| q09 | Sanciones de la iniciativa | 8 | **2** | Sigue correcta |
-| q10 | Procedimiento de protección de derechos | 18 / 19 | 11 / 9 | Sigue fallando la trampa |
-| q05 | Definición de datos sensibles | 426 | 426 | Sigue incorrecta: el pasaje no estaba entre los candidatos |
-
-- **Corrige lo que estaba cerca.** Con 30 candidatos y Recall@30 de 0.72, el techo del reranker lo pone la primera etapa: no puede subir lo que los embeddings dejaron fuera (q05).
-- **Costo:** unos 13 s por consulta en CPU.
-- **Siguiente paso:** más candidatos o una primera etapa híbrida (BM25 + embeddings) para subir ese techo; q10 y q05 dependen de ello.
 
 ---
 
