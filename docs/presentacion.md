@@ -25,7 +25,7 @@ Un asistente de consulta para una organización en México que trata datos perso
 
 ## 2. Por qué este corpus
 
-- **Tema común con traslape real.** Los derechos ARCO aparecen en las dos leyes y el reglamento, y el consentimiento en seis de los siete documentos: el retriever tiene pasajes plausibles pero incorrectos entre los cuales elegir.
+- **Tema común con traslape real.** Los derechos ARCO (Acceso, Rectificacion, Cancelacion, Oposicion) aparecen en las dos leyes y el reglamento, y el consentimiento en seis de los siete documentos: el retriever tiene pasajes plausibles pero incorrectos entre los cuales elegir.
 - **Confusión difícil.** La LFPDPPP y la LGPDPPSO comparten vocabulario y numeración, pero una regula a empresas y la otra al gobierno.
 - **Autoridad distinta.** La mezcla de ley, guía y propuesta permite evaluar si el sistema presenta como vigente algo que no lo es. En México no hay una ley general de IA: solo una iniciativa.
 - **Retos de parsing reales.** Tablas de cuatro columnas, notas al pie, encabezados repetidos y un PDF escaneado con OCR ruidoso (la iniciativa).
@@ -87,7 +87,78 @@ converter = DocumentConverter(
 
 ---
 
-## 5. Parsing: retos y soluciones
+## 5. Parsing: ejemplo con UNESCO, página 45
+
+<img src="img/unesco_p45.png" alt="UNESCO, página 45 del PDF (43 impresa)" width="420">
+
+La página tiene la Tabla 1, cuya primera actividad ocupa dos líneas, marcadores de nota en superíndice pegados a las cifras («2023¹⁶⁰») y cinco notas al pie.
+
+**PyMuPDF** · 0.23 s · 3 tablas detectadas
+
+```
+43
+CONSUMO INTERMEDIO
+159	 OCDE. Going Digital Toolkit. https://goingdigital.oecd.org/indicator/02     ← las notas salen antes del texto
+…
+fue del 7.74% del gasto intermedio total159.                                   ← el marcador se pega a la cifra
+…
+Servicios de diseño de sistemas de cómputo
+y servicios relacionados
+30,691
+34,439                                                                          ← cada celda en su propia línea
+```
+
+Dos de sus tres «tablas» son los títulos «CONSUMO INTERMEDIO» e «INVERSIÓN Y PRODUCCIÓN». En la tabla real, las tres actividades quedan en la primera fila y las otras dos filas solo tienen cifras:
+
+| ACTIVIDADES | 2021 | 2022* |
+|---|---|---|
+| Servicios de diseño… y servicios relacionados<br>Servicios de consultoría…<br>Servicios de investigación… | 30,691 | 34,439 |
+| *None* | 42,650 | 53,928 |
+| *None* | 30,967 | 33,153 |
+
+**pdfplumber** · 0.14 s · 1 tabla
+
+```
+…y de 150 millones de dólares a septiembre de 2023160.                          ← «2023» y la nota 160 se pegan
+…
+Servicios de diseño de sistemas de cómputo 30,691 34,439
+y servicios relacionados                                                        ← la segunda línea queda sin sus cifras
+```
+
+Su tabla tiene el mismo problema que la de PyMuPDF: las tres actividades en la primera fila.
+| ACTIVIDADES | 2021 | 2022* |
+|---|---|---|
+| Servicios de diseño… y servicios relacionados<br>Servicios de consultoría…<br>Servicios de investigación… | 30,691 | 34,439 |
+| *None* | 42,650 | 53,928 |
+| *None* | 30,967 | 33,153 |
+
+**Docling** · 1.98 s · 1 tabla · el que se eligió
+
+```
+## INVERSIÓN Y PRODUCCIÓN
+
+…y de 150 millones de dólares a septiembre de 2023 160 .                        ← el marcador queda separado
+
+| ACTIVIDADES                                                         |   2021 |   2022* |
+|---------------------------------------------------------------------|--------|---------|
+| Servicios de diseño de sistemas de cómputo y servicios relacionados | 30,691 |  34,439 |
+| Servicios de consultoría administrativa, científica y técnica       | 42,650 |  53,928 |
+| Servicios de investigación científica y desarrollo                  | 30,967 |  33,153 |
+```
+
+| | PyMuPDF | pdfplumber | Docling |
+|---|---|---|---|
+| Cada actividad con sus cifras | No | No | **Sí** |
+| Marcador de nota separado de la cifra | No («total159») | No («2023160») | **Sí** («2023 160») |
+| Títulos de sección | Como tablas falsas | Sin marcar | **Marcados** (`##`) |
+| Notas al pie | Antes del texto | Al final | Al final |
+| Número de página (43) | En el texto | En el texto | **Lo quita** |
+| Tiempo | 0.23 s | **0.14 s** | 1.98 s |
+
+
+---
+
+## 6. Parsing: retos y soluciones
 
 | Reto | Solución | Por qué |
 |---|---|---|
@@ -115,16 +186,17 @@ Nada se borra: la columna `removed` guarda la regla, para poder auditarla.
 
 ---
 
-## 6. Chunking: estrategia
+## 7. Chunking: estrategia
 
 **Decisión: agrupar elementos consecutivos** hasta un límite de tamaño. Un título de sección empieza un chunk nuevo, y en las leyes, el reglamento y la iniciativa también cada «Artículo N». Los elementos no se cortan.
 
-| A unos 1,000 caracteres por chunk | Tamaño fijo con traslape de 150 | Elementos agrupados |
+| Con el límite final de 1,000 caracteres | Tamaño fijo con traslape de 225 (15 %), descartado | Elementos agrupados, elegido |
 |---|---:|---:|
-| Chunks que empiezan a mitad de un párrafo | 802 de 813 | 0 |
-| Chunks legales que mezclan dos o más artículos | 174 | 0 |
+| Chunks que empiezan a mitad de un elemento | 533 de 542 | 0 |
+| Chunks legales que mezclan texto de dos o más artículos | 220 de 305 | 0 |
 
 - **Por qué:** en una ley, el artículo es la unidad de respuesta. Un chunk que mezcla dos artículos se recupera por uno y cita mal el otro.
+- **Cómo se midió:** una celda del notebook simula el corte de tamaño fijo sobre el mismo texto. Un chunk empieza a mitad de un elemento si su inicio no coincide con el inicio de un elemento de Docling (párrafo, elemento de lista, título o tabla), y mezcla artículos si tiene texto de dos o más.
 - **Descartados:** tamaño fijo (corta oraciones y artículos), división recursiva (sigue mezclando artículos), chunking semántico (necesita embeddings antes de dividir y es difícil de reproducir, cuando los documentos ya marcan su estructura) y el chunker de Docling (ignoraría la limpieza del parsing).
 
 ```python
@@ -148,9 +220,9 @@ def pack_elements(doc_flow, doc_type, max_chars):
 
 ---
 
-## 7. Chunking: tamaño, contexto y casos especiales
+## 8. Chunking: tamaño, contexto y casos especiales
 
-**1,500 caracteres (unos 375 tokens), sin traslape.**
+**1,500 caracteres, sin traslape.**
 
 | Límite | Chunks | Mediana | Chunks legales que continúan un artículo |
 |---:|---:|---:|---:|
@@ -176,7 +248,7 @@ Ley Federal de Protección de Datos Personales en Posesión de los Particulares 
 
 ---
 
-## 8. Consultas de evaluación
+## 9. Consultas de evaluación
 
 **Decisión: preguntas realistas**, como las haría un responsable de cumplimiento o un desarrollador, no dirigidas a los retos del parsing. Representan el uso real; la consecuencia es que ninguna toca las tablas del INAI ni el texto escaneado.
 
@@ -205,7 +277,38 @@ Entre todas cubren los 7 documentos.
 
 ---
 
-## 9. Embeddings: BGE-M3
+## 10. Ground truth (1/2)
+
+El ground truth de cada consulta tiene dos partes, anotadas a mano en `data/queries.json`:
+
+- **La respuesta ideal**, que es la referencia de RAGAS para context precision y context recall.
+- **Los pasajes que la responden**, copiados como citas exactas. Los chunks que contienen alguna cita son los **chunks esperados** (25 en total), y con ellos se calculan Precision@k y Recall@k.
+
+| id | Respuesta ideal | Pasajes esperados (documento, artículo, página del PDF · chunk) |
+|---|---|---|
+| **q01** | Es prácticamente la misma obligación. Para las empresas, el artículo 20 de la LFPDPPP obliga al responsable o tercero a establecer controles o mecanismos para que todas las personas que intervengan en cualquier fase del tratamiento guarden confidencialidad de los datos personales, obligación que subsiste aun después de terminar su relación con él. Para las dependencias de gobierno, el artículo 36 de la LGPDPPSO establece lo mismo, pero agrega que es sin menoscabo de las disposiciones de acceso a la información pública. | LFPDPPP art. 20 (p. 6) · `lfpdppp-0026`<br>LGPDPPSO art. 36 (p. 10) · `lgpdppso-0051` |
+| **q02** | En el artículo 20 de la LFPDPPP, que obliga al responsable o tercero a establecer controles para que quienes intervienen en el tratamiento guarden confidencialidad de los datos personales. El artículo 58, fracción VIII, lo confirma al considerar infracción incumplir el deber de confidencialidad establecido en el artículo 20. | LFPDPPP art. 20 (p. 6) · `lfpdppp-0026`<br>LFPDPPP art. 58, fr. VIII (p. 16) · `lfpdppp-0066` |
+| **q03** | Sí. El Reglamento de la LFPDPPP (artículo 52) establece que el responsable solo puede usar servicios de cómputo en la nube cuyo proveedor, entre otras condiciones, guarde confidencialidad respecto de los datos personales sobre los que presta el servicio. La LGPDPPSO (artículo 58) exige lo mismo en el sector público, y la guía del INAI retoma este requisito. | Reglamento art. 52 (p. 14) · `reglamento_lfpdppp-0060`<br>LGPDPPSO art. 58 (p. 15) · `lgpdppso-0077`<br>Guía del INAI (p. 28) · `inai_recomendaciones_ia-0049` y `-0052` |
+| **q04** | Sí. El artículo 26, fracción II, de la LFPDPPP da derecho a oponerse al tratamiento cuando los datos personales son objeto de un tratamiento automatizado que produce efectos jurídicos no deseados o afecta de manera significativa los intereses, derechos o libertades de la persona, y que está destinado a evaluar sin intervención humana aspectos personales como su situación económica o su fiabilidad. No procede si el tratamiento es necesario para cumplir una obligación legal del responsable. | LFPDPPP art. 26, fr. II y último párrafo (p. 8) · `lfpdppp-0032` |
+| **q05** | Los datos sobre el estado de salud son datos personales sensibles (LFPDPPP, artículo 2, fracción VI), así que se necesita el consentimiento expreso y por escrito de cada usuario, mediante firma autógrafa, firma electrónica o algún mecanismo de autenticación (artículo 8). Además, solo se pueden crear bases de datos con datos sensibles si se justifican por finalidades legítimas, concretas y acordes con la actividad de la empresa. La guía del INAI recomienda lo mismo. | LFPDPPP art. 2, fr. VI (p. 2) · `lfpdppp-0006`<br>LFPDPPP art. 8 (p. 4) · `lfpdppp-0014`<br>Guía del INAI (p. 35) · `inai_recomendaciones_ia-0064` |
+
+---
+
+## 11. Ground truth (2/2)
+
+| id | Respuesta ideal | Pasajes esperados (documento, artículo, página del PDF · chunk) |
+|---|---|---|
+| **q06** | Integrar un marco jurídico para la IA sin crear necesariamente un cuerpo regulatorio nuevo: identificar qué normas vigentes pueden aplicarse a la IA, cuáles deben adecuarse y cuáles hace falta crear; sensibilizar a autoridades y operadores jurídicos; diseñar instrumentos regulatorios ágiles; y definir criterios para el uso ético de la IA basados en principios y en la gestión de riesgos, valorando prohibir los sistemas que generan altos riesgos para la seguridad y los derechos humanos. También destaca actualizar el marco de protección de datos personales. | UNESCO, Tabla 2 «Recomendaciones principales» (p. 52) · `unesco_ram_mexico-0112`<br>UNESCO, «Integrar el marco jurídico de la IA» (p. 54) · `unesco_ram_mexico-0118` y `-0121` |
+| **q07** | Que toda decisión apoyada por inteligencia artificial debe tener responsables humanos: su uso en el ámbito público debe sustentarse en marcos institucionales que definan quién diseña, quién decide, quién supervisa y quién responde por sus efectos, de modo que las decisiones no queden en manos de la máquina y existan procedimientos de revisión y mecanismos de corrección. Además, si una decisión no puede explicarse, no debe automatizarse. Es una declaración ética, no una norma obligatoria. | Principios de Chapultepec, principio 2 (p. 1) · `principios_chapultepec-0005` |
+| **q08** | La iniciativa (artículo 112) propone de uno a cinco años de prisión y de cuatrocientos a seiscientos días multa para quien use la inteligencia artificial para suplantar la identidad de una persona física o colectiva con el fin de lucrarse indebidamente. Es una propuesta legislativa, no una ley vigente. | Iniciativa, art. 112 (p. 38) · `iniciativa_ley_ia_senado-0145` |
+| **q09** (trampa) | Según los documentos, en México no hay una ley de inteligencia artificial vigente. La IA se regula de forma indirecta con normas como la LFPDPPP, la Ley Federal para Prevenir y Eliminar la Discriminación y la Constitución, y se han presentado iniciativas en el Congreso. Una de ellas, la iniciativa de Ley General para el Uso y Control de la Inteligencia Artificial presentada en el Senado, propone sanciones, como multas equivalentes al daño o al 5% de los ingresos anuales del proveedor por el uso indebido de IA en salud y penas de prisión por fraude cibernético con IA, pero es solo una propuesta. | UNESCO, «Política pública de IA y regulación» (p. 19) · `unesco_ram_mexico-0031` y `-0032`<br>Iniciativa, arts. 109 y 113 (p. 38) · `iniciativa_ley_ia_senado-0142` y `-0146` |
+| **q10** (trampa) | Con la LFPDPPP de 2025 la queja ya no se presenta ante el INAI: se presenta una solicitud de protección de datos ante la Secretaría Anticorrupción y Buen Gobierno, y las menciones al INAI en otras normas se entienden hechas a los entes públicos que asumieron sus funciones. Si la empresa no respondió, la solicitud puede presentarse en cuanto venza el plazo de respuesta de la empresa, acompañada del documento que pruebe la fecha en que se pidió la cancelación. Puede presentarse por escrito libre o con los formatos o el sistema electrónico de la Secretaría. | LFPDPPP arts. 40 y 41 (pp. 11–12) · `lfpdppp-0047` y `-0049`<br>LFPDPPP art. 2, fr. XV (p. 3) · `lfpdppp-0007`<br>LFPDPPP, transitorio Cuarto (p. 18) · `lfpdppp-0075` |
+
+En las trampas, los pasajes esperados son los que corrigen la premisa: que no hay ley de IA vigente (q09) y que la solicitud ya no va al INAI sino a la Secretaría Anticorrupción y Buen Gobierno (q10).
+
+---
+
+## 12. Embeddings: BGE-M3
 
 **Decisión: BGE-M3** (`BAAI/bge-m3`), local con `sentence-transformers`.
 
@@ -225,7 +328,7 @@ Los 927 vectores tardaron 354 s en CPU y se guardan en `data/embeddings/` para n
 
 ---
 
-## 10. Base vectorial: ChromaDB
+## 13. Base vectorial: ChromaDB
 
 **Decisión: ChromaDB**, con distancia coseno.
 
@@ -246,7 +349,7 @@ collection.add(
 
 ---
 
-## 11. Recuperación: tres estrategias
+## 14. Recuperación: tres estrategias
 
 | Estrategia | Cómo funciona | Por qué |
 |---|---|---|
@@ -275,7 +378,7 @@ def rerank(question):
 
 ---
 
-## 12. Por qué se agregó el reranker
+## 15. Por qué se agregó el reranker
 
 Después del análisis de errores se propusieron siete mejoras; se eligió el reranker.
 
@@ -289,7 +392,7 @@ Las demás propuestas (búsqueda híbrida, reescribir la pregunta con el LLM, t�
 
 ---
 
-## 13. Generación: LLM local
+## 16. Generación: LLM local
 
 **Decisión: qwen3.5:9b en Ollama**, en la GPU local.
 
@@ -319,7 +422,7 @@ El encabezado `[iniciativa de ley; propuesta; no es ley vigente; …]` es lo que
 
 ---
 
-## 14. Evaluación
+## 17. Evaluación
 
 **Recuperación:** Precision@k (de los k primeros, qué parte es esperada) y Recall@k (de los esperados, qué parte está en los k primeros), con k = 1, 3, 5 y 10, sobre los chunks anotados a mano.
 
@@ -341,7 +444,7 @@ Un juez de 9B que evalúa sus propias respuestas puede ser indulgente, así que 
 
 ---
 
-## 15. Resultados: recuperación
+## 18. Resultados: recuperación
 
 Promedio de las 10 consultas:
 
@@ -365,7 +468,7 @@ Recall@5 por consulta:
 
 ---
 
-## 16. Resultados: generación (RAGAS) y trampas
+## 19. Resultados: generación (RAGAS) y trampas
 
 | Estrategia | Faithfulness | Answer relevancy | Context precision | Context recall |
 |---|---:|---:|---:|---:|
@@ -379,7 +482,7 @@ Recall@5 por consulta:
 
 ---
 
-## 17. Análisis de errores: recuperación
+## 20. Análisis de errores: recuperación
 
 | Causa | Consultas | Evidencia |
 |---|---|---|
@@ -394,7 +497,7 @@ Recall@5 por consulta:
 
 ---
 
-## 18. Análisis de errores: generación y RAGAS
+## 21. Análisis de errores: generación y RAGAS
 
 **Generación:**
 
@@ -412,7 +515,7 @@ Recall@5 por consulta:
 
 ---
 
-## 19. Efecto del reranker
+## 22. Efecto del reranker
 
 | Consulta | Chunk esperado | Embeddings | + reranker | Respuesta |
 |---|---|---:|---:|---|
@@ -429,7 +532,7 @@ Recall@5 por consulta:
 
 ---
 
-## 20. Producción: despliegue
+## 23. Producción: despliegue
 
 ```mermaid
 flowchart LR
@@ -449,7 +552,7 @@ flowchart LR
 
 ---
 
-## 21. Producción: elección de la API del LLM
+## 24. Producción: elección de la API del LLM
 
 **Decisión: Claude Sonnet 5.5 por la API de Anthropic** para la generación; los embeddings y el reranker se quedan en un servidor propio.
 
@@ -480,7 +583,7 @@ Antes de cambiar, se repetiría la evaluación con las mismas consultas para com
 
 ---
 
-## 22. Producción: el cuello de botella con 500 documentos
+## 25. Producción: el cuello de botella con 500 documentos
 
 Estimaciones a partir de los tiempos medidos (7 documentos, 263 páginas, 927 chunks); 500 documentos serían unas 18,800 páginas y 66,000 chunks.
 
@@ -500,7 +603,7 @@ Estimaciones a partir de los tiempos medidos (7 documentos, 263 páginas, 927 ch
 
 ---
 
-## 23. Conclusiones
+## 26. Conclusiones
 
 1. **El parsing y el chunking basados en la estructura** (artículos, títulos, filas de tabla con su cabecera, línea de contexto) dejan chunks que se pueden citar.
 2. **La recuperación es el eslabón débil.** BM25 y embeddings empatan en promedio (Recall@5 de 0.38), pero fallan en consultas distintas. El reranker subió Recall@5 a 0.61 y volvió correctas tres respuestas, pero no recupera lo que la primera etapa deja fuera.
