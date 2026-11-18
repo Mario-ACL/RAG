@@ -509,6 +509,7 @@ Recall@5 por consulta:
 
 **Qué tan confiable es RAGAS aquí:**
 
+- **El juez no da lo mismo en cada corrida.** Al recalcular los 120 puntajes con las mismas respuestas, cambiaron 15: 0.17 en promedio y hasta 0.5. Los promedios por estrategia se movieron hasta 0.05, tanto como algunas diferencias entre estrategias (context precision: 0.58 con embeddings y 0.65 con el reranker).
 - **Faithfulness alta no significa respuesta correcta.** Cinco respuestas incorrectas de BM25 y embeddings tienen 0.94 o más, y q05 con el reranker tiene 1.0: la métrica revisa que cada afirmación esté en los fragmentos, no que sean los correctos ni que estén vigentes.
 - **Answer relevancy castiga las salvedades.** q08 con BM25 es correcta, pero empieza con «no puedo confirmar… como una ley vigente» (lo que pide el prompt) y recibe 0. Esos ceros explican que embeddings saque más que BM25.
 - **El juez local es indulgente con el contexto.** En q06 con embeddings da 1.0 de context precision y recall con el prólogo y los agradecimientos, aunque el Recall@5 anotado es 0.
@@ -608,7 +609,7 @@ Estimaciones a partir de los tiempos medidos (7 documentos, 263 páginas, 927 ch
 1. **El parsing y el chunking basados en la estructura** (artículos, títulos, filas de tabla con su cabecera, línea de contexto) dejan chunks que se pueden citar.
 2. **La recuperación es el eslabón débil.** BM25 y embeddings empatan en promedio (Recall@5 de 0.38), pero fallan en consultas distintas. El reranker subió Recall@5 a 0.61 y volvió correctas tres respuestas, pero no recupera lo que la primera etapa deja fuera.
 3. **Los metadatos explícitos ayudan al LLM:** el estatus «propuesta; no es ley vigente» resolvió la trampa q09. Lo que hay que deducir, como que el INAI ya no existe, no lo resuelve el modelo de 9B.
-4. **RAGAS con un juez local sirve para comparar, no para medir.** Faithfulness alta no significa respuesta correcta; Precision@k y Recall@k anotados a mano son más confiables.
+4. **RAGAS con un juez local solo sirve para ver diferencias grandes.** Varía hasta 0.05 en los promedios entre corridas, y faithfulness alta no significa respuesta correcta; Precision@k y Recall@k anotados a mano son más confiables.
 
 ---
 
